@@ -29,16 +29,15 @@ public class DashBoardController extends HttpServlet {
 		List<User> user =  service.findAll();
 		List<Telephone> telefone = new ArrayList<Telephone>();
 		
-		
-		for (User userFor : user) {
-			int contador = 0;
-			telefone.add(userFor.getTelefone().get(contador));
-			contador ++;
+
+		for (int i = 0; i < user.size(); i++) {
+			for (int j = 0; j < 2; j++) {
+				Telephone tel = user.get(i).getTelefone().get(j);
+				telefone.add(tel);
+			}
 		}
 		
 		request.setAttribute("telephones", telefone);
-		
-		System.out.println(user.get(0).getTelefone().get(0));
 		
 		request.setAttribute("users", user);
 		

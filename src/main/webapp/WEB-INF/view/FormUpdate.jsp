@@ -51,10 +51,10 @@
 		
 		Telefone para contato (principal):<br>
 		DDD:
-		<input class="input-telefone" type="text" name="ddd1" value="${telephone.number}">
+		<input class="input-telefone" type="text" name="ddd1" value="${telephone2.ddd}">
 		
 		Número:
-		<input class="input-telefone" type="text" name="telefone1" value="${telephone.number}">
+		<input class="input-telefone" type="text" name="telefone1" value="${telephone2.number}">
 		
 		Tipo:
 		<select name="tipo1">
@@ -64,10 +64,10 @@
 		
 		Telefone para contato (secundário)<br>
 		DDD:
-		<input class="input-telefone" type="text" name="ddd2" value="${telephone2.number}">
+		<input class="input-telefone" type="text" name="ddd2" value="${telephone.ddd}">
 		
 		Número:
-		<input class="input-telefone" type="text" name="telefone2" value="${telephone2.number}">
+		<input class="input-telefone" type="text" name="telefone2" value="${telephone.number}">
 		Tipo:
 		<select name="tipo2">
 			  <option value="fixo">Fixo</option>

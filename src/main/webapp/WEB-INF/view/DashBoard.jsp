@@ -25,7 +25,8 @@
 	</div>
 	<c:forEach items="${users}"  var="user" varStatus="myIndex">
 		<div class="div-itens">
-			<p>${user.name} | ${user.email} | ${telephones[myIndex.index].ddd} ${telephones[myIndex.index].number} 
+			<p>${user.name} | ${user.email} | ${telephones[myIndex.index + 1].ddd} ${telephones[myIndex.index + 1].number} ${telephones[myIndex.index + 1].type} |
+			${telephones[myIndex.index].ddd} ${telephones[myIndex.index].number} ${telephones[myIndex.index].type}
 			<a href="/cadastropitang/user?acao=remover&id=${user.email}">Remover</a>
 			<a href="/cadastropitang/user?acao=atualizar&id=${user.email}">Atualizar</a>
 			</p>

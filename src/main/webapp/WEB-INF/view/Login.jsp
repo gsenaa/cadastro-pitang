@@ -32,7 +32,7 @@
 		<input type="password" name="password">
 		<br>
 		<input type="submit">
-		<a href="/cadastropitang/cadastro">Nao sou cadastrado</a>
+		<a href="/cadastropitang/cadastro">Não sou cadastrado</a>
 	</form>
 	
 	
