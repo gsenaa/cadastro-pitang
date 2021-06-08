@@ -37,8 +37,12 @@ public class UserController extends HttpServlet {
 		
 		if(paramAcao.equals("atualizar")) {
 			User user = service.findOne(paramId);
+			Telephone telephone = user.getTelefone().get(0);
+			Telephone telephone2 = user.getTelefone().get(1);
 			
 			request.setAttribute("user", user);
+			request.setAttribute("telephone", telephone);
+			request.setAttribute("telephone2", telephone2);
 				
 			RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/view/FormUpdate.jsp");
 			rd.forward(request, response);
@@ -57,6 +61,7 @@ public class UserController extends HttpServlet {
 		String nome = request.getParameter("nome");
 		String password = request.getParameter("password");
 		String telefone1 = request.getParameter("telefone1");
+		System.out.println(request.getParameter("ddd1"));
 		int ddd1 = Integer.parseInt(request.getParameter("ddd1"));
 		String tipo1 = request.getParameter("tipo1");
 		String telefone2 = request.getParameter("telefone2");

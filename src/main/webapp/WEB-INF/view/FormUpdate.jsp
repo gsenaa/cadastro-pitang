@@ -41,7 +41,7 @@
 <div>
 	<form action="user?acao=none&id=${user.email}" method="post">
 		Nome:
-		<input type="text" name="nome">
+		<input type="text" name="nome" value="${user.name}">
 		
 		Email:
 		<input type="text" name="email" readonly="readonly" value="${user.email}"><br><br>
@@ -51,10 +51,10 @@
 		
 		Telefone para contato (principal):<br>
 		DDD:
-		<input class="input-telefone" type="text" name="ddd2">
+		<input class="input-telefone" type="text" name="ddd1" value="${telephone.number}">
 		
 		Número:
-		<input class="input-telefone" type="text" name="telefone2">
+		<input class="input-telefone" type="text" name="telefone1" value="${telephone.number}">
 		
 		Tipo:
 		<select name="tipo1">
@@ -64,10 +64,10 @@
 		
 		Telefone para contato (secundário)<br>
 		DDD:
-		<input class="input-telefone" type="text" name="ddd2">
+		<input class="input-telefone" type="text" name="ddd2" value="${telephone2.number}">
 		
 		Número:
-		<input class="input-telefone" type="text" name="telefone2">
+		<input class="input-telefone" type="text" name="telefone2" value="${telephone2.number}">
 		Tipo:
 		<select name="tipo2">
 			  <option value="fixo">Fixo</option>

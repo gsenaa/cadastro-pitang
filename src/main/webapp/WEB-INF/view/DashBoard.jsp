@@ -19,13 +19,13 @@
 	}
 </style>
 </head>
-<body>
+<body>	
 	<div>
 		<h1>Lista de Users</h1>
 	</div>
-	<c:forEach items="${users}"  var="user">
+	<c:forEach items="${users}"  var="user" varStatus="myIndex">
 		<div class="div-itens">
-			<p>${user.name} | ${user.email} |
+			<p>${user.name} | ${user.email} | ${telephones[myIndex.index].ddd} ${telephones[myIndex.index].number} 
 			<a href="/cadastropitang/user?acao=remover&id=${user.email}">Remover</a>
 			<a href="/cadastropitang/user?acao=atualizar&id=${user.email}">Atualizar</a>
 			</p>

@@ -38,6 +38,7 @@ public class LoginController extends HttpServlet {
 			}
 	    }else {
 			RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/view/Login.jsp");
+			System.out.println("asdjuiasdsahduyi");
 			rd.forward(request, response);
 		}
 		

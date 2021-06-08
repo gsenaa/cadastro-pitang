@@ -1,6 +1,7 @@
 package controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.RequestDispatcher;
@@ -9,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import model.Telephone;
 import model.User;
 import service.UserService;
 
@@ -23,8 +25,18 @@ public class DashBoardController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		UserService service = new UserService();
-		
+			
 		List<User> user =  service.findAll();
+		List<Telephone> telefone = new ArrayList<Telephone>();
+		
+		
+		for (User userFor : user) {
+			int contador = 0;
+			telefone.add(userFor.getTelefone().get(contador));
+			contador ++;
+		}
+		
+		request.setAttribute("telephones", telefone);
 		
 		System.out.println(user.get(0).getTelefone().get(0));
 		
