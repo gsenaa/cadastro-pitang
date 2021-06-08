@@ -58,7 +58,7 @@
 		
 		Tipo:
 		<select name="tipo1">
-			  <option value="fixo">fixo</option>
+			  <option value="fixo">Fixo</option>
     		  <option value="Móvel">Móvel</option>
     	</select><br>
 		
@@ -70,7 +70,7 @@
 		<input class="input-telefone" type="text" name="telefone2">
 		Tipo:
 		<select name="tipo2">
-			  <option value="fixo">fixo</option>
+			  <option value="fixo">Fixo</option>
     		  <option value="Móvel">Móvel</option>
     	</select>
 		
